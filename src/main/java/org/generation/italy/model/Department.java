@@ -22,7 +22,7 @@ public class Department {
 	private String email;
 	private String website;
 
-	@Column(name = "head_of_department")
+	@Column(name = "head_of_department") // fargli riconoscere nome java(?)
 	private String headOfDepartment;
 
 	public Integer getId() {
