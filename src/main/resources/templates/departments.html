@@ -9,6 +9,7 @@
 <body>
 	<div class="container">
 		<h1>University Departments</h1>
+		<hr>
 		<table class="table">
 			<thead>
 				<tr>
@@ -18,6 +19,7 @@
 					<th scope="col">Email Address</th>
 					<th scope="col">Website</th>
 					<th scope="col">Head of Department</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,6 +30,7 @@
 					<td th:text="${department.email}" class="border"></td>
 					<td th:text="${department.website}" class="border"></td>
 					<td th:text="${department.headOfDepartment}" class="border"></td>
+					<td><a class="btn btn-primary" th:href="@{|/department/${department.id}|}">Degrees</a></td>
 				</tr>
 			</tbody>
 		</table>

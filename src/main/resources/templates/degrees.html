@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<div th:replace="resources :: head"></div>
+		<title>Uni Degrees</title>
+	</head>
+	<body>
+		<div class="container">
+			<table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Website</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item : ${department.getDegrees()}">
+                        <td th:text="${item.name}"></td>
+	                    <td th:text="${item.level}"></td>
+						<td th:text="${item.address}"></td>
+						<td th:text="${item.email}"></td>
+						<td th:text="${item.website}"></td>   
+                    </tr>
+                </tbody>
+            </table>
+			<div>
+				<a class="btn btn-primary" th:href="@{/}">Back</a>
+			</div>
+		
+		</div>
+		
+	<div th:replace="resources :: scripts"></div>	
+	</body>
+</html>
